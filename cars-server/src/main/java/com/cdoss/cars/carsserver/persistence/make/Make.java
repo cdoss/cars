@@ -1,4 +1,6 @@
-package com.cdoss.cars.carsserver.persistence;
+package com.cdoss.cars.carsserver.persistence.make;
+
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,8 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "manufacturer")
-public class Manufacturer {
+@Table(name = "make")
+public class Make {
 
 	@Id
 	@GeneratedValue
