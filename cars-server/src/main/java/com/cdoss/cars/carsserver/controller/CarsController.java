@@ -11,8 +11,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cdoss.cars.carsserver.make.dto.MakeDto;
+import com.cdoss.cars.carsserver.model.dto.ModelDto;
 import com.cdoss.cars.carsserver.persistence.make.Make;
+import com.cdoss.cars.carsserver.persistence.model.Model;
+import com.cdoss.cars.carsserver.persistence.model.ModelRepository;
 import com.cdoss.cars.carsserver.service.MakeService;
+import com.cdoss.cars.carsserver.service.ModelService;
 
 @RestController
 public class CarsController {
@@ -21,8 +25,11 @@ public class CarsController {
 	private MakeService makeService;
 	
 	@Autowired
+	private ModelService modelService;
+
+	@Autowired
 	private ModelMapper modelMapper;
-	
+
 	@GetMapping("/makes")
 	public ResponseEntity<List<MakeDto>> getManufacturers() {
 		List<Make> makes = makeService.getAllMakes();
@@ -33,13 +40,25 @@ public class CarsController {
 		}
 		return new ResponseEntity<List<MakeDto>>(makeDtos, HttpStatus.OK);
 	}
-	
+
+	@GetMapping("/models")
+	public ResponseEntity<List<ModelDto>> getModels() {
+		List<Model> models = modelService.getAllModels();
+		List<ModelDto> modelDtos = new ArrayList<>();
+		for (Model model : models) {
+			ModelDto dto = convertToDto(model);
+			modelDtos.add(dto);
+		}
+		return new ResponseEntity<List<ModelDto>>(modelDtos, HttpStatus.OK);
+	}
+
 	private MakeDto convertToDto(Make make) {
 		return modelMapper.map(make, MakeDto.class);
 	}
-//	@GetMapping("/models")
-//	public ResponseEntity<List<Model>> getModels() {
-//		List<Model> models = modelRepository.findAll();
-//		return new ResponseEntity<List<Model>>(models, HttpStatus.OK);
-//	}
+	
+	private ModelDto convertToDto(Model model) {
+		ModelDto dto = modelMapper.map(model, ModelDto.class);
+		dto.setMake(model.getMake().getName());
+		return dto;
+	}
 }
