@@ -739,6 +739,219 @@ INSERT INTO model(make_id, name) VALUES
 	(26,'QX70'),
 	(26,'QX80');
 
+-- Isuzu
+INSERT INTO model(make_id, name) VALUES
+	(27,'Amigo'),
+	(27,'Ascender'),
+	(27,'Axiom'),
+	(27,'Hombre Regular Cab'),
+	(27,'Hombre Spacecab'),
+	(27,'Impulse'),
+	(27,'Oasis'),
+	(27,'Regular Cab'),
+	(27,'Rodeo'),
+	(27,'Rodeo Sport'),
+	(27,'Spacecab'),
+	(27,'Stylus'),
+	(27,'Trooper'),
+	(27,'VehiCROSS'),
+	(27,'i-280 Extended Cab'),
+	(27,'i-290 Extended Cab'),
+	(27,'i-350 Crew Cab'),
+	(27,'i-370 Crew Cab'),
+	(27,'i-370 Extended Cab');
+
+-- 	Jaguar
+INSERT INTO model(make_id, name) VALUES
+	(28,'E-PACE'),
+	(28,'F-PACE'),
+	(28,'F-TYPE'),
+	(28,'I-PACE'),
+	(28,'S-Type'),
+	(28,'X-Type'),
+	(28,'XE'),
+	(28,'XF'),
+	(28,'XJ'),
+	(28,'XK');
+
+-- Jeep
+	(29,'Cherokee'),
+	(29,'Comanche Regular Cab'),
+	(29,'Commander'),
+	(29,'Compass'),
+	(29,'Gladiator'),
+	(29,'Grand Cherokee'),
+	(29,'Grand Cherokee L'),
+	(29,'Grand Wagoneer'),
+	(29,'Liberty'),
+	(29,'Patriot'),
+	(29,'Renegade'),
+	(29,'Wrangler'),
+	(29,'Wrangler Unlimited');
+
+-- Kia
+INSERT INTO model(make_id, name) VALUES
+	(30,'Amanti'),
+	(30,'Borrego'),
+	(30,'Cadenza'),
+	(30,'Forte'),
+	(30,'Forte Koup'),
+	(30,'Forte5'),
+	(30,'K5'),
+	(30,'K900'),
+	(30,'Niro'),
+	(30,'Niro EV'),
+	(30,'Niro Plug-in Hybrid'),
+	(30,'Optima'),
+	(30,'Optima (2006.5)'),
+	(30,'Optima Hybrid'),
+	(30,'Optima Plug-in Hybrid'),
+	(30,'Rio'),
+	(30,'Rondo'),
+	(30,'Sedona'),
+	(30,'Seltos'),
+	(30,'Sephia'),
+	(30,'Sorento'),
+	(30,'Soul'),
+	(30,'Soul EV'),
+	(30,'Spectra'),
+	(30,'Sportage'),
+	(30,'Stinger'),
+	(30,'Telluride');
+
+-- Lamborghini
+INSERT INTO model(make_id, name) VALUES
+	(31,'Aventador'),
+	(31,'Gallardo'),
+	(31,'Huracan'),
+	(31,'Murcielago'),
+	(31,'Murcielago LP640');
+	
+-- Land Rover
+INSERT INTO model(make_id, name) VALUES
+	(32,'Defender 110'),
+	(32,'Defender 90'),
+	(32,'Discovery'),
+	(32,'Discovery Series II'),
+	(32,'Discovery Sport'),
+	(32,'Freelander'),
+	(32,'LR2'),
+	(32,'LR3'),
+	(32,'LR4'),
+	(32,'Range Rover'),
+	(32,'Range Rover Evoque'),
+	(32,'Range Rover Sport'),
+	(32,'Range Rover Velar');
+
+-- 
+INSERT INTO model(make_id, name) VALUES
+	(33,'CT'),
+	(33,'ES'),
+	(33,'GS'),
+	(33,'GX'),
+	(33,'HS'),
+	(33,'IS'),
+	(33,'IS F'),
+	(33,'LC'),
+	(33,'LFA'),
+	(33,'LS'),
+	(33,'LX'),
+	(33,'NX'),
+	(33,'RC'),
+	(33,'RX'),
+	(33,'SC'),
+	(33,'UX');
+
+-- Lincoln
+INSERT INTO model(make_id, name) VALUES
+	(34,'Aviator'),
+	(34,'Blackwood'),
+	(34,'Continental'),
+	(34,'Corsair'),
+	(34,'LS'),
+	(34,'MKC'),
+	(34,'MKS'),
+	(34,'MKT'),
+	(34,'MKX'),
+	(34,'MKZ'),
+	(34,'Mark LT'),
+	(34,'Mark VII'),
+	(34,'Mark VIII'),
+	(34,'Nautilus'),
+	(34,'Navigator'),
+	(34,'Navigator L'),
+	(34,'Town Car'),
+	(34,'Zephyr');
+
+-- Lotus
+INSERT INTO model(make_id, name) VALUES
+	(35,'Elise'),
+	(35,'Evora'),
+	(35,'Evora 400'),
+	(35,'Exige'),
+	(35,'Exige S');
+
+-- Mazda
+INSERT INTO model(make_id, name) VALUES
+	(36,'323'),
+	(36,'626'),
+	(36,'929'),
+	(36,'B-Series Cab Plus'),
+	(36,'B-Series Extended Cab'),
+	(36,'B-Series Regular Cab'),
+	(36,'CX-3'),
+	(36,'CX-30'),
+	(36,'CX-5'),
+	(36,'CX-7'),
+	(36,'CX-9'),
+	(36,'MAZDA2'),
+	(36,'MAZDA3'),
+	(36,'MAZDA5'),
+	(36,'MAZDA6'),
+	(36,'MPV'),
+	(36,'MX-3'),
+	(36,'MX-5 Miata'),
+	(36,'MX-5 Miata RF'),
+	(36,'MX-6'),
+	(36,'Millenia'),
+	(36,'Navajo'),
+	(36,'Protege'),
+	(36,'Protege5'),
+	(36,'RX-7'),
+	(36,'RX-8'),
+	(36,'Tribute');
+
+-- Maserati
+INSERT INTO model(make_id, name) VALUES
+	(37,'Coupe'),
+	(37,'Ghibli'),
+	(37,'GranSport'),
+	(37,'GranTurismo'),
+	(37,'Levante'),
+	(37,'Quattroporte');
+
+-- 
+INSERT INTO model(make_id, name) VALUES
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,''),
+	(,'');
+
 -- 
 INSERT INTO model(make_id, name) VALUES
 	(,''),
