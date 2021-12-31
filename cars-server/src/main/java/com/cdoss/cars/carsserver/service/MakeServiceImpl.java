@@ -17,4 +17,9 @@ public class MakeServiceImpl implements MakeService {
 	public List<Make> getAllMakes() {
 		return makeRepository.findAll();
 	}
+
+	@Override
+	public Make getMakeByName(String name) {
+		return makeRepository.findByName(name);
+	}
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cdoss.cars.carsserver.persistence.make.Make;
 import com.cdoss.cars.carsserver.persistence.model.Model;
 import com.cdoss.cars.carsserver.persistence.model.ModelRepository;
 
@@ -16,5 +17,9 @@ public class ModelServiceImpl implements ModelService {
 	
 	public List<Model> getAllModels() {
 		return modelRepository.findAll();
+	}
+	
+	public List<Model> getModelsByMake(Make make) {
+		return modelRepository.findByMake(make);
 	}
 }

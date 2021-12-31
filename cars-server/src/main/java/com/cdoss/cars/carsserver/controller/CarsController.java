@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cdoss.cars.carsserver.make.dto.MakeDto;
@@ -39,6 +40,25 @@ public class CarsController {
 			makeDtos.add(dto);
 		}
 		return new ResponseEntity<List<MakeDto>>(makeDtos, HttpStatus.OK);
+	}
+	
+	@GetMapping("/makes/{make}")
+	public ResponseEntity<MakeDto> getManufacturer(@PathVariable("make") String makeStr) {
+		Make make = makeService.getMakeByName(makeStr);
+		MakeDto makeDto = convertToDto(make);
+		return new ResponseEntity<MakeDto>(makeDto, HttpStatus.OK);
+	}
+	
+	@GetMapping("/makes/{make}/models")
+	public ResponseEntity<List<ModelDto>> getModelsByManufacturer(@PathVariable("make") String makeStr) {
+		Make make = makeService.getMakeByName(makeStr);
+		List<Model> models = modelService.getModelsByMake(make);
+		List<ModelDto> modelsDto = new ArrayList<>();
+		for(Model model : models) {
+			ModelDto dto = convertToDto(model);
+			modelsDto.add(dto);
+		}
+		return new ResponseEntity<List<ModelDto>>(modelsDto, HttpStatus.OK);
 	}
 
 	@GetMapping("/models")
