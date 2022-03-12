@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.cdoss.cars.carsserver.persistence.listing.Listing;
 import com.cdoss.cars.carsserver.persistence.model.Model;
 
 @Entity
@@ -19,12 +20,15 @@ public class Make {
 	@Id
 	@GeneratedValue
 	private long id;
-	
+
 	@Column(name = "name")
 	private String name;
-	
+
 	@OneToMany(mappedBy = "make", fetch = FetchType.LAZY)
-	private List<Model> model;
+	private List<Model> models;
+
+	@OneToMany(mappedBy = "make", fetch = FetchType.LAZY)
+	private List<Listing> listings;
 
 	public long getId() {
 		return id;
@@ -42,12 +46,20 @@ public class Make {
 		this.name = name;
 	}
 
-	public List<Model> getModel() {
-		return model;
+	public List<Model> getModels() {
+		return models;
 	}
 
-	public void setModel(List<Model> model) {
-		this.model = model;
+	public void setModels(List<Model> models) {
+		this.models = models;
 	}
-	
+
+	public List<Listing> getListings() {
+		return listings;
+	}
+
+	public void setListings(List<Listing> listings) {
+		this.listings = listings;
+	}
+
 }

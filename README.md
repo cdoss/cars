@@ -5,3 +5,4 @@ To Do items
 - pagination for list of items
 - vehicle type/body style (e.g. car, truck)
 - add motorcycles, atv etc
+- handle bad requests
