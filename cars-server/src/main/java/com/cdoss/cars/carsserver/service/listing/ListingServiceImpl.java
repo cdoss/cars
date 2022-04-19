@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cdoss.cars.carsserver.persistence.listing.Listing;
 import com.cdoss.cars.carsserver.persistence.listing.ListingRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ListingServiceImpl implements ListingService {
 
 	@Autowired
