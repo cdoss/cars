@@ -7,6 +7,7 @@
   <name>Cars</name>
   <description>Buy and sell cars</description>
   <modules>
+    <module>cars-client</module>
   	<module>cars-server</module>
   </modules>
 </project>
